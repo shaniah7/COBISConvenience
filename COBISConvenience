@@ -36,7 +36,7 @@ public class Main {
 
                 String output = "";
                 double total;
-                double finalTotal = 0;
+                double GrandTotal = 0;
                 //System.out.print("\nEnter the name of the customer: ");
                 System.out.println("Enter the name of the customer: ");
                 while(!(input = stringInput.nextLine()).equalsIgnoreCase("no")){ //loop to enter each customer order
@@ -61,7 +61,7 @@ public class Main {
                         }
                     }
                     output += "\n\t\t"+total+"\n";
-                    finalTotal += total;
+                    GrandTotal += total;
                     System.out.print("\nEnter the name of the next customer (no to exit): ");
                 }
                 System.out.println("RECEIPT: \n"+output);
@@ -69,6 +69,6 @@ public class Main {
                 for(String i:cusItem) {
                     System.out.println("\t"+i+" ("+cusItemAmounts.get(cusItem.indexOf(i))+")");
                 }
-                System.out.println("\nGRAND TOTAL: "+ finalTotal);
+                System.out.println("\nGRAND TOTAL: "+ GrandTotal);
             }
         }
